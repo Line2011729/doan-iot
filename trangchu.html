@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trang chủ</title>
+	<link rel="stylesheet" href="trangchu.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="thongtin">
+        <div class="box">
+          <img src="https://cdn.glitch.global/56b13060-e2cb-4a8d-8ce5-8f28659303b3/logo.jpg?v=1681570495227" width="90" height="80">
+        </div>
+        <p>
+          Công nghệ IOT và Ứng dụng<br/>
+          Nhóm 02 - Đề tài: Giám sát và điều khiển thiết bị trong gia đình qua internet
+        </p>
+      </div>
+      <header>
+      	<div class="inner-header container">
+      		<a href="index.html" class="logo">NHÓM02</a>
+      		<nav>
+      			<ul id="main-menu">
+      				<li><a href="trangchu.html">Trang chủ</a></li>
+     				<li><a href="trangdanhsach.html">Danh sách thành viên</a></li>
+     				<li><a href="trangdieukhien.html">Trang điều khiển</a></li>
+     				<li><a href="tranglienhe.html">Liên hệ</a></li>
+      			</ul>
+      		</nav>
+      	</div>
+      </header>
+    <div id="tabnoidung">
+		
+		<div class="tabs">
+			<ul class="nav-tabs">
+				<li class="active"><a href="#lido">Lí do chọn đề tài</a></li>
+				<li><a href="#muctieu">Mục tiêu đề tài</a></li>
+				<li><a href="#loiich">Lợi ích</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="lido" class="tab-content-item">
+					<h2>Lí do chọn đề tài</h2>
+					<p>Ngày nay với sự phát triển của khoa học và kỹ thuật, công nghệ kỹ thuật điện tử mà trong đó là kỹ thuật điều khiển tự động đóng vai trò quan trọng trong mọi lĩnh vực khoa học, quản lý, công nghiệp, thông tin.. Vấn đề điều khiển thiết bị từ xa hiện nay ngày càng được quan tâm và phát triển rộng rãi nhằm đáp ứng nhu cầu của con người, giúp tiết kiệm thời gian và quản lý được mọi lúc mọi nơi.</p>
+					<p>Ngày nay với sự phát triển của khoa học và kỹ thuật, công nghệ kỹ thuật điện tử mà trong đó là kỹ thuật điều khiển tự động đóng vai trò quan trọng trong mọi lĩnh vực khoa học, quản lý, công nghiệp, thông tin.. Vấn đề điều khiển thiết bị từ xa hiện nay ngày càng được quan tâm và phát triển rộng rãi nhằm đáp ứng nhu cầu của con người, giúp tiết kiệm thời gian và quản lý được mọi lúc mọi nơi.</p>
+					
+				</div>
+				<div id="muctieu" class="tab-content-item">
+					<h2>Mục tiêu đề tài</h2>
+					<p>+ Phục vụ nhu cầu của người tiêu dùng trong thời đại công nghệ với sự bận rộn cao.</p>
+					<p>+ Nâng cao chất lượng cuộc sống và sự tiện lợi trong gia đình.</p>
+					<p>+ Giúp cho cuộc sống ngày càng tiện nghi, an toàn.</p>
+					<p>+ Góp phần sử dụng hợp lý các nguồn tài nguyên.</p>
+					
+					
+				</div>
+				<div id="loiich" class="tab-content-item">
+					<h2>Lợi ích</h2>
+					<p>+ Kiểm soát đèn, quạt, thiết bị điện từ mọi nơi.</p>
+					<p>+ Tiết kiệm tiền và thời gian.</p>
+					<p>+ Gia tăng tiện nghi.</p>
+					<p>+ Dễ dàng sử dụng.</p>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.tab-content-item').hide();
+			$('.tab-content-item:first-child').fadeIn();
+			$('.nav-tabs li').click(function(){
+				//active nav tabs
+				$('.nav-tabs li').removeClass('active')
+				$(this).addClass('active');
+				//show tab-content item
+				let id_tab_content = $(this).children('a').attr('href')
+				$('.tab-content-item').hide();
+				$(id_tab_content).fadeIn();
+
+				return false
+
+			});
+		});
+
+	</script>
+</html>
